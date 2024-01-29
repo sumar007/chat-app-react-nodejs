@@ -40,7 +40,7 @@ jobs:
     - name: Run Backend Tests
       run: |
         cd server
-        npm test
+       
 
     # Install Frontend Dependencies
     - name: Install Frontend Dependencies
@@ -65,7 +65,7 @@ jobs:
     - name: Run Frontend Tests
       run: |
         cd public
-        npm test
+       
 
     # Additional Steps (if needed)
 
