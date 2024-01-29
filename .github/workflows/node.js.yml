@@ -64,8 +64,4 @@ jobs:
     #     cd public
     #     npm start
 
-    # Additional Steps (if needed)
-
-    - name: Cleanup
-      run: |
-        # Any cleanup steps if needed
+   
