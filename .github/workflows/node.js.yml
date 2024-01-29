@@ -55,17 +55,17 @@ jobs:
     #     touch .env
     #     echo "${{ secrets.FRONTEND_ENV }}" > .env
 
-    # Build Frontend
-    - name: Build Frontend
-      run: |
-        cd public
-        npm run build
+    # # Build Frontend
+    # - name: Build Frontend
+    #   run: |
+    #     cd public
+    #     npm run build
 
     # Run Frontend Tests
     - name: Run Frontend Tests
       run: |
         cd public
-       
+        npm start
 
     # Additional Steps (if needed)
 
