@@ -23,6 +23,5 @@ jobs:
     - run: npm ci
     - run: |
          touch .env
-         echo "${{ secrets.ZADDSF }}" > .env
-    - run: npm run build  # Add this line if your project has a build step
-    - run: npm test      # Add this line if your project has a test step
+         echo "${{ secrets.BUILD_ENV }}" > .env
+  
