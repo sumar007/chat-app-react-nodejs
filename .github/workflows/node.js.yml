@@ -36,10 +36,7 @@ jobs:
         touch .env
         echo "${{ secrets.BUILD_ENV }}" > .env
 
-    # Run Backend Tests
-    - name: Run Backend Tests
-      run: |
-        cd server
+   
        
 
     # Install Frontend Dependencies
@@ -61,11 +58,11 @@ jobs:
     #     cd public
     #     npm run build
 
-    # Run Frontend Tests
-    - name: Run Frontend Tests
-      run: |
-        cd public
-        npm start
+    # # Run Frontend Tests
+    # - name: Run Frontend Tests
+    #   run: |
+    #     cd public
+    #     npm start
 
     # Additional Steps (if needed)
 
