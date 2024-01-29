@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@latest
+      uses: actions/checkout@v2  # Specify a version instead of 'latest'
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -36,8 +36,10 @@ jobs:
         touch .env
         echo "${{ secrets.BUILD_ENV }}" > .env
 
-   
-       
+    # Display the contents of the .env file for debugging
+    - name: Debug - Display Backend .env
+      run: |
+        cat server/.env
 
     # Install Frontend Dependencies
     - name: Install Frontend Dependencies
@@ -45,23 +47,26 @@ jobs:
         cd public
         npm ci
 
-    # Set up Frontend Environment
+    # Set up Frontend Environment (if needed)
     # - name: Set up Frontend Environment
     #   run: |
     #     cd public 
     #     touch .env
     #     echo "${{ secrets.FRONTEND_ENV }}" > .env
 
-    # # Build Frontend
+    # Display the contents of the .env file for debugging
+    # - name: Debug - Display Frontend .env
+    #   run: |
+    #     cat public/.env
+
+    # Build Frontend (if needed)
     # - name: Build Frontend
     #   run: |
     #     cd public
     #     npm run build
 
-    # # Run Frontend Tests
+    # Run Frontend Tests (if needed)
     # - name: Run Frontend Tests
     #   run: |
     #     cd public
     #     npm start
-
-   
